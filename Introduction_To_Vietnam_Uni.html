@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  font-size: 14px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#US {background-color: white;}
+#IU {background-color: white;}
+#UT {background-color: white;}
+#UIT {background-color: white;}
+#UEL {background-color: white;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('US', this, '#40B3FF')">University of Science</button>
+<button class="tablink" onclick="openPage('IU', this, '#40B3FF')" id="defaultOpen">International University</button>
+<button class="tablink" onclick="openPage('UT', this, '#40B3FF')">University of Technology</button>
+<button class="tablink" onclick="openPage('UIT', this, '#40B3FF')">University of Information Technology</button>
+<button class="tablink" onclick="openPage('UEL', this, '#40B3FF')">University of Economics and Law</button>
+
+<div id="US" class="tabcontent">
+  <h3>University of Science</h3>
+  <p>VNUHCM-University of Science (VNUHCM-US; formerly known as University of Sciences) has been serving as a pioneer in offering various scientific degrees across Southern Vietnam since its original establishment as the Indochina College of Science in 1941.
+
+</p>
+</div>
+
+<div id="IU" class="tabcontent">
+  <h3>International University</h3>
+  <p>VNUHCM - International University (Ho Chi Minh City International University, Vietnamese: Trường Đại học Quốc tế, Đại học Quốc gia Thành phố Hồ Chí Minh) is the first and unique English-medium public research university in Vietnam. Established in 2003, it is now becoming as one of the leading research powerhouse in Vietnam. The university is affiliated to the Vietnam National University, Ho Chi Minh City (VNU-HCM).</p> 
+</div>
+
+<div id="UT" class="tabcontent">
+  <h3>University of Technology</h3>
+  <p>The Ho Chi Minh City University of Technology (abbreviation: HCMUT Vietnamese: Trường Đại học Bách khoa, Đại học Quốc gia Thành phố Hồ Chí Minh) is a key member university of Vietnam National University, Ho Chi Minh City and is the flagship university in technology teaching and research activities in Vietnam.</p>
+</div>
+
+<div id="UIT" class="tabcontent">
+  <h3>About</h3>
+  <p>The Ho Chi Minh City University of Technology (abbreviation: HCMUT Vietnamese: Trường Đại học Bách khoa, Đại học Quốc gia Thành phố Hồ Chí Minh)[1] is a key member university of Vietnam National University, Ho Chi Minh City and is the flagship university in technology teaching and research activities in Vietnam.</p>
+</div>
+
+<div id="UEL" class="tabcontent">
+  <h3>About</h3>
+  <p>VNUHCM-University of Economics and Law is a university in Linh Xuan ward, Thu Duc, Ho Chi Minh City, Vietnam. It is a member university of Vietnam National University, Ho Chi Minh City. It was formerly VNU-HCM Faculty of Economics and was promoted to university on March 24, 2010.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
